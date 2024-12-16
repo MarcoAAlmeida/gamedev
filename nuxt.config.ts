@@ -6,10 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/content',
   ],
-
   // https://devtools.nuxt.com
   devtools: { enabled: true },
-
   // Env variables - https://nuxt.com/docs/getting-started/configuration#environment-variables-and-private-tokens
   runtimeConfig: {
     public: {
