@@ -12,6 +12,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@nuxt/content": "3.0.0-alpha.8",
     "@nuxt/eslint": "^0.6.0",
     "@nuxthub/core": "^0.7.34",
     "nuxt": "^3.13.2",
