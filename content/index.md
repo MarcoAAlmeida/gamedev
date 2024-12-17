@@ -1,3 +1,3 @@
 # My First Page
 
-keeping same content
+using Vuetify [check changelog](/changelog)

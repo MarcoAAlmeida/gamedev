@@ -1,13 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   // https://nuxt.com/modules
-  modules: [
-    '@nuxthub/core',
-    '@nuxt/eslint',
-    '@nuxt/content',
-  ],
+  modules: ['@nuxthub/core', '@nuxt/eslint', '@nuxt/content', 'vuetify-nuxt-module', 'vuetify-nuxt-module', '@unocss/nuxt'],
   // https://devtools.nuxt.com
   devtools: { enabled: true },
+  css: ['@mdi/font/css/materialdesignicons.css'],
   // Env variables - https://nuxt.com/docs/getting-started/configuration#environment-variables-and-private-tokens
   runtimeConfig: {
     public: {
@@ -27,6 +24,14 @@ export default defineNuxtConfig({
     config: {
       stylistic: {
         quotes: 'single',
+      },
+    },
+  },
+  vuetify: {
+    vuetifyOptions: {
+      icons: {
+        defaultSet: 'mdi',
+        sets: ['mdi', 'fa'],
       },
     },
   },
