@@ -30,8 +30,7 @@ export default defineNuxtConfig({
   vuetify: {
     vuetifyOptions: {
       icons: {
-        defaultSet: 'mdi',
-        sets: ['mdi', 'fa'],
+        defaultSet: 'unocss-mdi'
       },
     },
   },
