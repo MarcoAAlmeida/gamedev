@@ -1,16 +1,26 @@
+<script setup lang="ts">
+const drawer = ref(false)
+
+const resetDrawer = () => {
+  drawer.value = !drawer.value
+}
+
+onMounted(() => {
+  drawer.value = false
+})
+</script>
+
 <template>
   <v-layout class="rounded rounded-md">
     <v-app-bar :elevation="1">
       <template #prepend>
-        <nuxt-link to="/">
-          <v-app-bar-nav-icon color="black" />
-        </nuxt-link>
+        <v-app-bar-nav-icon color="black" @click.stop="resetDrawer" />
       </template>
 
       <v-app-bar-title>Notebook</v-app-bar-title>
     </v-app-bar>
 
-    <v-navigation-drawer>
+    <v-navigation-drawer v-model="drawer">
       <v-list>
         <v-list-item title="testing basic layout">
           <v-icon color="red-darken-2" icon="mdi-account-circle" size="large" />
@@ -29,6 +39,7 @@
     </v-navigation-drawer>
 
     <v-main class="d-flex align-top justify-left py1 px10" style="min-height: 300px;">
+      {{  drawer }}
       <ContentDoc />
     </v-main>
   </v-layout>
