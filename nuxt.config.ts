@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   },
   // https://devtools.nuxt.com
   devtools: { enabled: true },
-  css: ['@mdi/font/css/materialdesignicons.css'],
+  css: ['@/assets/main.scss', '@mdi/font/css/materialdesignicons.css'],
   // Env variables - https://nuxt.com/docs/getting-started/configuration#environment-variables-and-private-tokens
   runtimeConfig: {
     public: {
@@ -33,12 +33,8 @@ export default defineNuxtConfig({
   },
   vuetify: {
     moduleOptions: {
-      disableVuetifyStyles: false,
+      styles: { configFile: 'assets/settings.scss' },
     },
-    vuetifyOptions: {
-      icons: {
-        defaultSet: 'unocss-mdi',
-      },
-    },
+    vuetifyOptions: './vuetify.config.ts',
   },
 })

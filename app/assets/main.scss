@@ -1,6 +1,3 @@
-.gradient {
-    &.primary {
-      background: linear-gradient(to top right, #2563eb, #4b8efb);
-      color: white;
-    }
-  }
+@use 'vuetify' with (
+    $font-size-root: 1em,
+);

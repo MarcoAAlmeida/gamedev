@@ -1,7 +1,21 @@
 <script setup lang="ts">
+import { useTheme } from 'vuetify'
+
+const theme = useTheme()
+
+const toggleTheme = () => {
+  theme.global.name.value = theme.global.name.value === 'light' ? 'dark' : 'light'
+}
+
+const toggleLabel = computed(() => theme.global.name.value === 'light' ? 'dark' : 'light')
+
 const drawer = ref(false)
 
 const items = ref([
+  {
+    title: 'Home',
+    to: '/',
+  },
   {
     title: 'Changelog',
     to: 'changelog',
@@ -11,8 +25,8 @@ const items = ref([
     to: 'resources',
   },
   {
-    title: 'Stack',
-    to: 'stack',
+    title: 'Cloudfare',
+    to: 'cloudfare',
   },
 ])
 
@@ -29,13 +43,11 @@ onMounted(() => {
   <v-layout class="rounded rounded-md">
     <v-app-bar :elevation="1">
       <template #prepend>
-        <v-app-bar-nav-icon color="black" @click.stop="resetDrawer" />
+        <v-app-bar-nav-icon @click.stop="resetDrawer" />
       </template>
 
       <v-app-bar-title>
-        <nuxt-link class="text-decoration-none text-black" to="/">
-          Notebook
-        </nuxt-link>
+        Notebook
       </v-app-bar-title>
     </v-app-bar>
 
@@ -47,11 +59,20 @@ onMounted(() => {
           :title="item.title"
           :to="item.to"
         />
+        <v-list-item @click="toggleTheme">
+          <v-chip
+            class="ma-2"
+            label
+          >
+            <Icon name="ic:sharp-dark-mode" class="ma-1" />
+            <span class="ma-1">{{ toggleLabel }}</span>
+          </v-chip>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
     <v-main class="d-flex align-top justify-left">
-      <ContentDoc class="ma-6" />
+      <ContentDoc class="ma-8" />
     </v-main>
   </v-layout>
 </template>

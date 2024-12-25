@@ -12,18 +12,20 @@ description: 'resources for building this app'
 3. [Vuetify navigation drawer](https://vuetifyjs.com/en/components/navigation-drawers/#bottom-drawer)
 4. [Vuetify wireframe](https://vuetifyjs.com/en/getting-started/wireframes/#examples)
 
-# Vuetify Nuxt module
-- [vuetify-nuxt-module](https://nuxt.com/modules/vuetify-nuxt-module)
+## Vuetify Nuxt module
+- [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/)
 
 # Nuxt
 - [Nuxt guide](https://nuxt.com/docs/guide)
 
-# NuxtHub
+## NuxtHub
 - [NuxtHub Deployments](https://admin.hub.nuxt.com/marco-a-almeida/hello-edge/production)
 
-# Cloudfare
-- [d1](https://developers.cloudflare.com/d1/)
 
 # Markdown
 
 1. [Markdown extended syntax](https://www.markdownguide.org/extended-syntax/)
+
+# PNPM
+
+- [PNPM](https://pnpm.io/cli/install)
