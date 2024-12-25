@@ -1,3 +1,3 @@
 <template>
-  <p>card</p>
+  <p>a simple card</p>
 </template>

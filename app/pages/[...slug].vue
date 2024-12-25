@@ -1,6 +1,21 @@
 <script setup lang="ts">
 const drawer = ref(false)
 
+const items = ref([
+  {
+    title: 'Changelog',
+    to: 'changelog',
+  },
+  {
+    title: 'Resources',
+    to: 'resources',
+  },
+  {
+    title: 'Stack',
+    to: 'stack',
+  },
+])
+
 const resetDrawer = () => {
   drawer.value = !drawer.value
 }
@@ -17,30 +32,32 @@ onMounted(() => {
         <v-app-bar-nav-icon color="black" @click.stop="resetDrawer" />
       </template>
 
-      <v-app-bar-title>Notebook</v-app-bar-title>
+      <v-app-bar-title>
+        <nuxt-link class="text-decoration-none text-black" to="/">
+          Notebook
+        </nuxt-link>
+      </v-app-bar-title>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer v-model:model-value="drawer">
       <v-list>
-        <v-list-item title="testing basic layout">
-          <v-icon color="red-darken-2" icon="mdi-account-circle" size="large" />
-          <v-icon color="green-darken-2" icon="mdi-home" size="large" />
-        </v-list-item>
-        <v-list-item title="stack">
-          <v-icon icon="i-logos:vue" />
-          <v-icon icon="i-logos:nuxt-icon" />
-          <v-icon icon="i-logos:vuetifyjs" />
-          <v-icon icon="i-logos:unocss" />
-        </v-list-item>
-        <v-list-item title="built with">
-          <Icon name="uil:github" style="color: black" size="1.2em" />
-        </v-list-item>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          :title="item.title"
+          :to="item.to"
+        />
       </v-list>
     </v-navigation-drawer>
 
-    <v-main class="d-flex align-top justify-left py1 px10" style="min-height: 300px;">
-      {{  drawer }}
-      <ContentDoc />
+    <v-main class="d-flex align-top justify-left">
+      <ContentDoc class="ma-6" />
     </v-main>
   </v-layout>
 </template>
+
+<style lang="css">
+table td, table th {
+    padding: 10px; /* Adjust as needed */
+}
+</style>

@@ -32,6 +32,9 @@ export default defineNuxtConfig({
     },
   },
   vuetify: {
+    moduleOptions: {
+      disableVuetifyStyles: false,
+    },
     vuetifyOptions: {
       icons: {
         defaultSet: 'unocss-mdi',
