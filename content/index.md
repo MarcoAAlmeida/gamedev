@@ -5,6 +5,6 @@ description: 'where I land'
 
 # Home
 
-using Vuetify [check changelog](/changelog)
+[check changelog](/changelog)
 
 

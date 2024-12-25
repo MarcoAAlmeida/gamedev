@@ -21,16 +21,16 @@ const items = ref([
     to: '/changelog',
   },
   {
-    title: 'Resources',
-    to: '/resources',
-  },
-  {
     title: 'Cloudfare',
     to: '/cloudfare',
   },
   {
     title: 'Nuxt',
     to: '/nuxt',
+  },
+  {
+    title: 'Resources',
+    to: '/resources',
   },
 ])
 
@@ -76,11 +76,14 @@ onMounted(() => {
     </v-navigation-drawer>
 
     <v-main class="d-flex align-top justify-left">
-      <v-card class="ma-2 w-100">
-        <v-card-text>
-          <ContentDoc class="ma-6" />
-        </v-card-text>
-      </v-card>
+      <v-sheet
+        class="d-flex flex-wrap mx-auto px-4"
+        elevation="4"
+        width="100%"
+        rounded
+      >
+        <ContentDoc class="ma-6" />
+      </v-sheet>
     </v-main>
   </v-layout>
 </template>

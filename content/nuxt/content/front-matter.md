@@ -1,6 +1,8 @@
 ---
 title: 'Front-matter'
 description: 'provide metadata to pages'
+icon: 'i-vscode-icons:file-type-light-yaml'
+url: 'https://content.nuxt.com/usage/markdown#front-matter'
 ---
 
 # Front-matter
@@ -32,3 +34,5 @@ which renders like:
 
 > The title is '{{ $doc.title }}' and customVariable is '{{ $doc.customVariable || 'defaultValue' }}'
 
+::simpleCard{:icon='icon' :title='title' :description='description' :url='url'}
+::
