@@ -18,15 +18,19 @@ const items = ref([
   },
   {
     title: 'Changelog',
-    to: 'changelog',
+    to: '/changelog',
   },
   {
     title: 'Resources',
-    to: 'resources',
+    to: '/resources',
   },
   {
     title: 'Cloudfare',
-    to: 'cloudfare',
+    to: '/cloudfare',
+  },
+  {
+    title: 'Nuxt',
+    to: '/nuxt',
   },
 ])
 
@@ -72,13 +76,14 @@ onMounted(() => {
     </v-navigation-drawer>
 
     <v-main class="d-flex align-top justify-left">
-      <ContentDoc class="ma-8" />
+      <v-card class="ma-2 w-100">
+        <v-card-text>
+          <ContentDoc class="ma-6" />
+        </v-card-text>
+      </v-card>
     </v-main>
   </v-layout>
 </template>
 
 <style lang="css">
-table td, table th {
-    padding: 10px; /* Adjust as needed */
-}
 </style>

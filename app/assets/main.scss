@@ -1,3 +1,28 @@
 @use 'vuetify' with (
     $font-size-root: 1em,
 );
+
+blockquote {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: .2em solid #ccc;
+}
+
+p {
+    letter-spacing: .02em;
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+
+pre {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+
+table td, table th {
+    padding: 1em;
+}
