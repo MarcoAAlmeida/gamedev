@@ -29,6 +29,10 @@ const items = ref([
     to: '/nuxt',
   },
   {
+    title: 'Wireframes',
+    to: '/wireframes',
+  },
+  {
     title: 'Resources',
     to: '/resources',
   },
