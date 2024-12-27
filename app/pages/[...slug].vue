@@ -13,6 +13,10 @@ const drawer = ref(false)
 
 const items = ref([
   {
+    title: 'Nuxt',
+    to: '/nuxt',
+  },
+  {
     title: 'Home',
     to: '/',
   },
@@ -23,10 +27,6 @@ const items = ref([
   {
     title: 'Cloudfare',
     to: '/cloudfare',
-  },
-  {
-    title: 'Nuxt',
-    to: '/nuxt',
   },
   {
     title: 'Wireframes',

@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-system-bar>
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-icon>mdi-square</v-icon>
 
@@ -18,9 +18,9 @@
         class="d-block text-center mx-auto mt-4"
         color="grey-darken-1"
         size="36"
-      ></v-avatar>
+      />
 
-      <v-divider class="mx-3 my-5"></v-divider>
+      <v-divider class="mx-3 my-5" />
 
       <v-avatar
         v-for="n in 6"
@@ -28,7 +28,7 @@
         class="d-block text-center mx-auto mb-9"
         color="grey-lighten-1"
         size="28"
-      ></v-avatar>
+      />
     </v-navigation-drawer>
 
     <v-navigation-drawer width="244">
@@ -36,15 +36,15 @@
         color="grey-lighten-5"
         height="128"
         width="100%"
-      ></v-sheet>
+      />
 
       <v-list>
         <v-list-item
           v-for="n in 5"
           :key="n"
-          :title="`Item ${ n }`"
+          :title="`Item ${n}`"
           link
-        ></v-list-item>
+        />
       </v-list>
     </v-navigation-drawer>
 
@@ -54,7 +54,7 @@
       height="72"
       flat
     >
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-responsive max-width="156">
         <v-text-field
@@ -64,7 +64,7 @@
           variant="solo-filled"
           flat
           hide-details
-        ></v-text-field>
+        />
       </v-responsive>
     </v-app-bar>
 
@@ -75,9 +75,9 @@
         <v-list-item
           v-for="n in 5"
           :key="n"
-          :title="`Item ${ n }`"
+          :title="`Item ${n}`"
           link
-        ></v-list-item>
+        />
       </v-list>
     </v-navigation-drawer>
 
@@ -93,7 +93,7 @@
         variant="solo-filled"
         flat
         hide-details
-      ></v-text-field>
+      />
     </v-footer>
   </v-app>
 </template>

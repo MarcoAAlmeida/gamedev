@@ -1,13 +1,39 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
   // https://nuxt.com/modules
-  modules: ['@nuxthub/core', '@nuxt/eslint', '@nuxt/content', 'vuetify-nuxt-module', 'vuetify-nuxt-module', '@unocss/nuxt', '@nuxt/icon'],
+  modules: [
+    '@nuxthub/core',
+    '@nuxt/eslint',
+    '@nuxt/content',
+    'vuetify-nuxt-module',
+    'vuetify-nuxt-module',
+    '@unocss/nuxt',
+    '@nuxt/icon'],
   components: {
     global: true,
     dirs: ['~/components'],
   },
   // https://devtools.nuxt.com
   devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&family=Quicksand:wght@300..700&display=swap',
+        },
+      ],
+    } },
   css: ['@/assets/main.scss', '@mdi/font/css/materialdesignicons.css'],
   content: {
     highlight: {

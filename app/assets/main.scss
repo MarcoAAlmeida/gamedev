@@ -1,6 +1,8 @@
 @use 'vuetify' with (
-    $font-size-root: 1em,
+    $font-size-root: .9em,
+    $body-font-family: 'Playwrite AU VIC Guides'
 );
+
 
 blockquote {
     margin-top: 1em;
@@ -8,6 +10,10 @@ blockquote {
     margin-left: 1em;
     padding-left: 1em;
     border-left: .2em solid #ccc;
+}
+
+h2 {
+    margin-top: 1em;
 }
 
 p {
