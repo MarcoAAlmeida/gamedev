@@ -13,12 +13,12 @@ const drawer = ref(false)
 
 const items = ref([
   {
-    title: 'Nuxt',
-    to: '/nuxt',
-  },
-  {
     title: 'Home',
     to: '/',
+  },
+  {
+    title: 'Nuxt',
+    to: '/nuxt',
   },
   {
     title: 'Changelog',

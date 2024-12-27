@@ -8,6 +8,7 @@ description: 'what has been changed lately'
 
 | date | log |
 | :-- | :-- |
+| 2024/12/26 | finally able to gain some control over SASS variables, and introduced usage of Google Fonts |
 | 2024/12/25 | slowly building up more complexity, added support for MDC components within markdow (@see SimpleCard.global.vue ) |
 | 2024/12/24 | more progress with Vuetify styling, and added minimal content files and navigation |
 | 2024/12/17 | another incremental progress, usig UNOCSS icons, and Nuxt Icon component, but still struggling to get icons properly rendered in markdown content files |

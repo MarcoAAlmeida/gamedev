@@ -22,21 +22,36 @@ The [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/) is used to integrate Vuet
 
 ## SASS customization
 
-```
+```{css}
 @use 'vuetify' with (
     $font-size-root: .9em,
     $body-font-family: 'Playwrite AU VIC Guides'
 );
 ```
 
+Added head links for Google Fonts at `nuxt.config.ts`
+```{json}
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '',
+        },
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&family=Quicksand:wght@300..700&display=swap',
+        },
+      ],
 
 ```
-@use 'vuetify' with (
-    $font-size-root: .9em,
-    $body-font-family: 'Playwrite AU VIC Guides'
-);
-```
 
+color configurations handled at `vuetify.config.ts` (for a particularly ugly combination):
 ```
 export default defineVuetifyConfiguration({
   theme: {
