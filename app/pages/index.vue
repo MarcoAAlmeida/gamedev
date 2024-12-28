@@ -22,12 +22,15 @@
       </v-app-bar>
 
       <v-main>
-        <v-container>
+        <v-container
+          class="mx-auto"
+          max-width="400"
+        >
           <v-row dense>
             <v-col cols="12">
               <v-card color="#385F73">
                 <v-card-title class="text-h5">
-                  Unlimited ideas coming to the backlog now
+                  Unlimited ideas in backlog now
                 </v-card-title>
 
                 <v-card-subtitle>
@@ -77,9 +80,9 @@
                   </div>
 
                   <v-avatar
-                    class="ma-3"
+                    class="ma-2"
                     rounded="0"
-                    size="125"
+                    size="x-large"
                   >
                     <v-img src="https://images-cdn.ubuy.qa/655d9c5bd5dda268411b1c0e-art-pop-audio-cd-audiobook-november.jpg" />
                   </v-avatar>
@@ -92,7 +95,7 @@
                 <div class="d-flex flex-no-wrap justify-space-between">
                   <div>
                     <v-card-title class="text-h5">
-                      Let's dance about web development
+                      dance about web development
                     </v-card-title>
 
                     <v-card-subtitle>hint: this is not about a pipe</v-card-subtitle>
@@ -108,9 +111,9 @@
                   </div>
 
                   <v-avatar
-                    class="ma-3"
+                    class="ma-2"
                     rounded="0"
-                    size="125"
+                    size="x-large"
                   >
                     <v-img src="https://i.etsystatic.com/12529226/r/il/a9e390/1954250070/il_fullxfull.1954250070_rozm.jpg" />
                   </v-avatar>
