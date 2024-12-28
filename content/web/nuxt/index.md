@@ -23,7 +23,7 @@ For specific modules:
 
 ## NuxtHub
 
-[NuxtHub](https://hub.nuxt.com/docs/getting-started) is backed by [Cloudfare](/cloudfare), and puts :
+[NuxtHub](https://hub.nuxt.com/docs/getting-started) is backed by [Cloudfare](/nuxt/cloudfare), and puts :
 
 >  On top of deploying your Nuxt application, NuxtHub aims to provide a complete backend experience on top of the framework, allowing developers to build full-stack applications on the Edge, check [Nuxt on the Edge](https://nuxt.com/blog/nuxt-on-the-edge)
 

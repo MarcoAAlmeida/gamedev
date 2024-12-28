@@ -3,29 +3,33 @@ import { useListPages } from '@/composables/useListPages'
 
 const examplePages = useListPages('examples')
 
-const links = ref([
-  'Home',
-  'About Us',
-  'Team',
-  'Services',
-  'Blog',
-  'Contact Us',
+const icons = ref([
+  'mdi-facebook',
+  'mdi-twitter',
+  'mdi-linkedin',
+  'mdi-instagram',
 ])
 
-const examplesGaga = computed(() => examplePages.map(item => (
+const gagarium = ref([
+  'https://ladygaganow.net/uploads/monthly_2021_09/1-9-09_Meeno_016.jpg.a5c56653769a34b95655559678a49cac.jpg',
+  'https://i.pinimg.com/564x/ef/07/c9/ef07c973cdba91a55fa7ed11b72c2a3f.jpg',
+  'https://nexus.radio/wp-content/uploads/2021/11/telephone-lady-gaga.jpg',
+])
+
+const examplesGaga = computed(() => examplePages.map((item, i) => (
   { ...item,
     flex: 12,
     title: item.name,
     to: item.path,
-    src: 'https://ladygaganow.net/uploads/monthly_2021_09/1-9-09_Meeno_016.jpg.a5c56653769a34b95655559678a49cac.jpg' })))
+    src: gagarium.value[i % gagarium.value.length] })))
 </script>
 
 <template>
   <v-app>
     <v-app-bar app color="pink">
-      <v-app-bar-nav-icon to="/meta" link />
+      <v-app-bar-nav-icon to="/" link />
 
-      <v-toolbar-title>Some folio</v-toolbar-title>
+      <v-toolbar-title>Gaga game</v-toolbar-title>
 
       <v-spacer />
 
@@ -84,22 +88,28 @@ const examplesGaga = computed(() => examplePages.map(item => (
       </v-container>
     </v-main>
 
-    <v-footer class="bg-grey-lighten-1">
-      <v-row justify="center" no-gutters>
+    <v-footer
+      class="bg-indigo-lighten-1 text-center d-flex flex-column"
+    >
+      <div>
         <v-btn
-          v-for="link in links"
-          :key="link"
-          class="mx-2"
-          color="white"
-          rounded="xl"
+          v-for="icon in icons"
+          :key="icon"
+          :icon="icon"
+          class="mx-4"
           variant="text"
-        >
-          {{ link }}
-        </v-btn>
-        <v-col class="text-center mt-4" cols="12">
-          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-        </v-col>
-      </v-row>
+        />
+      </div>
+
+      <div class="pt-0">
+        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      </div>
+
+      <v-divider />
+
+      <div>
+        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </div>
     </v-footer>
   </v-app>
 </template>

@@ -10,6 +10,7 @@ url: 'https://web.dev/'
 
 | date | log |
 | :-- | :-- |
+| 2024/12/28 | familiarized myself with [Vuetify layouts](https://vuetifyjs.com/en/features/application-layout/#placing-components). and placing components |
 | 2024/12/28 | added a [backlog](/meta/backlog) |
 | 2024/12/26 | finally able to gain some control over SASS variables, and introduced usage of Google Fonts |
 | 2024/12/25 | slowly building up more complexity, added support for MDC components within markdow (@see SimpleCard.global.vue ) |

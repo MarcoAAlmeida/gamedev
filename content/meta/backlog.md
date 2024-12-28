@@ -15,6 +15,9 @@ url: 'https://web.dev/'
 
 - cards to display book reviews
 
+- code highlighting
+    1. https://www.docs4.dev/posts/how-to-build-a-custom-code-block-with-nuxt-mdc-and-prose-pre
+
 
 - integrate an image component, similar to the one in [nuxt-image-gallery](https://admin.hub.nuxt.com/marco-a-almeida/nuxt-image-gallery/production)
 
