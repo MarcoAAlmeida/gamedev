@@ -16,7 +16,9 @@
     "@nuxt/eslint": "^0.6.0",
     "@nuxt/icon": "^1.10.2",
     "@nuxthub/core": "^0.7.34",
+    "@pinia/nuxt": "0.9.0",
     "nuxt": "^3.13.2",
+    "pinia": "^2.3.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
     "vuetify-nuxt-module": "0.18.3"

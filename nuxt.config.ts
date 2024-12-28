@@ -9,7 +9,9 @@ export default defineNuxtConfig({
     'vuetify-nuxt-module',
     'vuetify-nuxt-module',
     '@unocss/nuxt',
-    '@nuxt/icon'],
+    '@nuxt/icon',
+    '@pinia/nuxt',
+  ],
   components: {
     global: true,
     dirs: ['~/components'],

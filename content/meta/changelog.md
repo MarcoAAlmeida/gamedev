@@ -1,6 +1,8 @@
 ---
 title: 'changelog'
 description: 'what has been changed lately'
+icon: 'mdi-web'
+url: 'https://web.dev/'
 ---
 
 # Changelog

@@ -1,42 +1,17 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify'
 
+const navStore = useNavigationStore()
+
+const { menuItems } = storeToRefs(navStore)
+
 const theme = useTheme()
 
 const toggleTheme = () => {
   theme.global.name.value = theme.global.name.value === 'light' ? 'dark' : 'light'
 }
 
-const toggleLabel = computed(() => theme.global.name.value === 'light' ? 'dark' : 'light')
-
 const drawer = ref(false)
-
-const items = ref([
-  {
-    title: 'Home',
-    to: '/',
-  },
-  {
-    title: 'Nuxt',
-    to: '/nuxt',
-  },
-  {
-    title: 'Changelog',
-    to: '/changelog',
-  },
-  {
-    title: 'Cloudfare',
-    to: '/cloudfare',
-  },
-  {
-    title: 'Wireframes',
-    to: '/wireframes',
-  },
-  {
-    title: 'Resources',
-    to: '/resources',
-  },
-])
 
 const resetDrawer = () => {
   drawer.value = !drawer.value
@@ -59,34 +34,39 @@ onMounted(() => {
       </v-app-bar-title>
     </v-app-bar>
 
-    <v-navigation-drawer v-model:model-value="drawer">
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+    >
       <v-list>
         <v-list-item
-          v-for="item in items"
+          v-for="item in menuItems"
           :key="item.title"
           :title="item.title"
           :to="item.to"
         />
-        <v-list-item @click="toggleTheme">
-          <v-chip
-            class="ma-2"
-            label
-          >
-            <Icon name="ic:sharp-dark-mode" class="ma-1" />
-            <span class="ma-1">{{ toggleLabel }}</span>
-          </v-chip>
-        </v-list-item>
       </v-list>
+
+      <template #append>
+        <div class="pa-2">
+          <v-btn-group
+            variant="outlined"
+            divided
+          >
+            <v-btn icon="mdi-theme-light-dark" @click="toggleTheme" />
+            <v-btn icon="mdi-view-dashboard" href="https://admin.hub.nuxt.com/marco-a-almeida/" target="_blank" />
+          </v-btn-group>
+        </div>
+      </template>
     </v-navigation-drawer>
 
     <v-main class="d-flex align-top justify-left">
       <v-sheet
         class="d-flex flex-wrap mx-auto px-4"
-        elevation="4"
+        elevation="2"
         width="100%"
-        rounded
       >
-        <ContentDoc class="ma-6" />
+        <ContentDoc class="ma-2" />
       </v-sheet>
     </v-main>
   </v-layout>
