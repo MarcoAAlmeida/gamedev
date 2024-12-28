@@ -26,6 +26,14 @@ export const useNavigationStore = defineStore('nav', () => {
         link: true,
       },
     },
+    {
+      title: 'Wireframes',
+      props: {
+        prependIcon: 'mdi-console-line',
+        to: '/wireframes',
+        link: true,
+      },
+    },
   ])
 
   return {
