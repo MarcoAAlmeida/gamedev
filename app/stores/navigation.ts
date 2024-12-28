@@ -4,27 +4,27 @@ export const useNavigationStore = defineStore('nav', () => {
   const menuItems = ref([
     {
       title: 'Home',
-      to: '/',
+      props: {
+        prependIcon: 'mdi-home',
+        to: '/',
+        link: true,
+      },
     },
     {
       title: 'Web',
-      to: '/web',
+      props: {
+        prependIcon: 'mdi-web',
+        to: '/web',
+        link: true,
+      },
     },
     {
       title: 'Meta',
-      to: '/meta',
-    },
-    {
-      title: 'Cloudfare',
-      to: '/cloudfare',
-    },
-    {
-      title: 'Wireframes',
-      to: '/wireframes',
-    },
-    {
-      title: 'Resources',
-      to: '/resources',
+      props: {
+        prependIcon: 'mdi-console-line',
+        to: '/meta',
+        link: true,
+      },
     },
   ])
 

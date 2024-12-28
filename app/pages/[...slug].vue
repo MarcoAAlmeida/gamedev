@@ -38,14 +38,25 @@ onMounted(() => {
       v-model="drawer"
       temporary
     >
-      <v-list>
-        <v-list-item
-          v-for="item in menuItems"
-          :key="item.title"
-          :title="item.title"
-          :to="item.to"
-        />
-      </v-list>
+      <v-list :items="menuItems" />
+
+      <template #prepend>
+        <v-list>
+          <v-list-item
+            prepend-avatar="https://media.licdn.com/dms/image/v2/C4E03AQGdwW8RIsYb4g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516657994044?e=1740614400&v=beta&t=wJosF5afL6B05xpD_Bc2K3ZjNkOSAa49nOiMYi6Nv6M"
+            subtitle="marcoalmeida.dev.br"
+            title="Marco Almeida"
+            href="https://www.linkedin.com/in/marcoaasilva/"
+            target="_blank"
+          >
+            <template #append>
+              <icon name="i-logos:linkedin-icon" size=".2em" />
+            </template>
+          </v-list-item>
+        </v-list>
+
+        <v-divider />
+      </template>
 
       <template #append>
         <div class="pa-2">
