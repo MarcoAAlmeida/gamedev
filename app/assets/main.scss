@@ -1,8 +1,15 @@
 @use 'vuetify' with (
     $font-size-root: .9em,
     $body-font-family: 'Roboto Condensed'
+    
 );
 
+*:link {
+    color: rgb(4, 145, 67); // Change default link color
+  }
+  *:visited {
+    color: rgb(19, 99, 3); // Change visited link color
+  }
 
 blockquote {
     margin-top: 1em;

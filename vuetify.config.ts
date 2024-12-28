@@ -8,13 +8,12 @@ export default defineVuetifyConfiguration({
       light: {
         dark: false,
         colors: {
-          surface: '#EEEEEE' },
+          background: '#FFFFFF',
+          surface: '#FFFFFF',
+          anchor: '#8c9eff' },
       },
       dark: {
         dark: true,
-        colors: {
-          background: '#00FFFF',
-        },
       },
     },
   },

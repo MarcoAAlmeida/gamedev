@@ -1,11 +1,9 @@
 ---
 title: 'resources'
 description: 'resources for building this app'
+icon: 'i-devicon:cloudflare'
+url: https://developers.cloudflare.com/
 ---
-
-# Iconography
-1. [Icônes](https://icones.js.org/)
-2. [Material Design Icons](https://pictogrammers.github.io/@mdi/font/2.0.46/)
 
 # Markdown
 
