@@ -28,8 +28,36 @@ url: 'https://web.dev/'
 
 holds [Project Gutenberg](https://www.gutenberg.org) metadata collected from [feed site](https://www.gutenberg.org/cache/epub/feeds/)
 
-parses metadata with rdf-
+[Project Gutemberg offline catalog](https://www.gutenberg.org/ebooks/offline_catalogs.html#xmlrdf)
 
-https://developers.cloudflare.com/workers/examples/
+parses metadata with [rdf-parse](https://www.npmjs.com/package/rdf-parse)
 
-https://en.wikipedia.org/wiki/Open_Publication_Distribution_System
+stores the parsed metadata in a database
+
+create an OpenAPI to retrieve metadata using [Nuxt server support](/web/nuxt/server)
+
+[Open Publication Distribution System](https://en.wikipedia.org/wiki/Open_Publication_Distribution_System)
+
+## Book gallery layouts
+
+- [Goodreads gallery](https://www.goodreads.com/genres/art)
+- [Amazon bookstore](https://www.amazon.com.br/Livros/b?ie=UTF8&node=6740748011)
+- [Livraria Cultura](https://www.livrariacultura.com.br/saraiva)
+
+## Make navigation.ts menuItem selection hierarchical
+
+avoid sections like these in `app/stores/navigation.ts`
+```
+navigationConfig.value.set('/', rootMenuItems.value)
+navigationConfig.value.set('/web', webMenuItems.value)
+navigationConfig.value.set('/web/nuxt', webMenuItems.value)
+navigationConfig.value.set('/web/design', webMenuItems.value)
+navigationConfig.value.set('/web/design/iconography', webMenuItems.value)
+navigationConfig.value.set('/web/greyzone', webMenuItems.value)
+```
+
+if `/web/design` is not found, pick `/web`
+
+## Patreonizing
+
+- [egghead.io](https://egghead.io/)

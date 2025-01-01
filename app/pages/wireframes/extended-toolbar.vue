@@ -1,14 +1,13 @@
 <template>
   <v-app id="inspire">
     <v-app-bar extended>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon />
 
       <v-app-bar-title>Application</v-app-bar-title>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
 
-      <v-btn icon="mdi-dots-vertical">
-      </v-btn>
+      <v-btn icon="mdi-dots-vertical" />
     </v-app-bar>
 
     <v-main>
@@ -19,7 +18,7 @@
             :key="n"
             cols="4"
           >
-            <v-card height="200"></v-card>
+            <v-card height="200" />
           </v-col>
         </v-row>
       </v-container>

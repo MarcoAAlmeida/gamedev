@@ -6,16 +6,16 @@
           class="me-4 "
           color="grey-darken-1"
           size="32"
-        ></v-avatar>
+        />
 
         <v-btn
           v-for="link in links"
           :key="link"
           :text="link"
           variant="text"
-        ></v-btn>
+        />
 
-        <v-spacer></v-spacer>
+        <v-spacer />
 
         <v-responsive max-width="160">
           <v-text-field
@@ -26,7 +26,7 @@
             flat
             hide-details
             single-line
-          ></v-text-field>
+          />
         </v-responsive>
       </v-container>
     </v-app-bar>
@@ -42,15 +42,15 @@
                   :key="n"
                   :title="`List Item ${n}`"
                   link
-                ></v-list-item>
+                />
 
-                <v-divider class="my-2"></v-divider>
+                <v-divider class="my-2" />
 
                 <v-list-item
                   color="grey-lighten-4"
                   title="Refresh"
                   link
-                ></v-list-item>
+                />
               </v-list>
             </v-sheet>
           </v-col>
@@ -70,23 +70,23 @@
 </template>
 
 <script setup>
-  const links = [
-    'Dashboard',
-    'Messages',
-    'Profile',
-    'Updates',
-  ]
+const links = [
+  'Dashboard',
+  'Messages',
+  'Profile',
+  'Updates',
+]
 </script>
 
 <script>
-  export default {
-    data: () => ({
-      links: [
-        'Dashboard',
-        'Messages',
-        'Profile',
-        'Updates',
-      ],
-    }),
-  }
+export default {
+  data: () => ({
+    links: [
+      'Dashboard',
+      'Messages',
+      'Profile',
+      'Updates',
+    ],
+  }),
+}
 </script>

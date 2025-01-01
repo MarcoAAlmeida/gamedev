@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
     <v-system-bar>
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-icon>mdi-square</v-icon>
 
@@ -11,7 +11,7 @@
     </v-system-bar>
 
     <v-app-bar>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
 
       <v-app-bar-title>Application</v-app-bar-title>
     </v-app-bar>
@@ -40,7 +40,7 @@
               cols="6"
               md="2"
             >
-              <v-sheet height="150"></v-sheet>
+              <v-sheet height="150" />
             </v-col>
           </template>
         </v-row>
@@ -50,13 +50,13 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue'
+import { ref } from 'vue'
 
-  const drawer = ref(null)
+const drawer = ref(null)
 </script>
 
 <script>
-  export default {
-    data: () => ({ drawer: null }),
-  }
+export default {
+  data: () => ({ drawer: null }),
+}
 </script>

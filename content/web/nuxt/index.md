@@ -1,15 +1,16 @@
 ---
 title: 'Nuxt'
 description: 'a free and open-source framework for developing Vue.js web applications'
-icon: 'i-vscode-icons:file-type-nuxt'
+icon: i-vscode-icons:file-type-nuxt
 url: 'https://nuxt.com/docs/getting-started/introduction'
 ---
 
-# Nuxt
+# What is Nuxt?
 
 According to this [brief introduction](https://nuxt.com/docs/getting-started/introduction):
 
 > Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.
+
 
 For CMS-oriented apps, check [Nuxt Content](nuxt/content), and [Nuxt Templates](https://nuxt.com/templates)
 
@@ -18,7 +19,11 @@ For a UI toolkit, check [Vuetify](nuxt/vuetify)
 For specific modules:
 
 1. [nuxt-icon](nuxt/nuxt-icon) and [additional iconographic resources](/web/design/iconography)
+2. [nuxt-image](https://image.nuxt.com/usage/nuxt-img)
 
+## Fullstack
+
+- [server API](/web/nuxt/server)
 
 
 ## NuxtHub
@@ -30,8 +35,7 @@ For specific modules:
 [Nuxt Hub admin dashboard](https://admin.hub.nuxt.com/marco-a-almeida)
 
 1. [NuxtHub Deployments](https://admin.hub.nuxt.com/marco-a-almeida/hello-edge/production)
+2. [Blob Storage](https://hub.nuxt.com/docs/features/blob)
 
 
 
-::simpleCard{:icon='icon' :title='title' :description='description' :url='url'}
-::

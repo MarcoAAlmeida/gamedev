@@ -1,8 +1,19 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useNavigationStore = defineStore('nav', () => {
-  const currentRoute = ref('pinia')
-  const rootMenuItems = ref([
+  interface MenuItems {
+    title?: string
+    props?: MenuItemsProps
+  }
+
+  interface MenuItemsProps {
+    prependIcon?: string
+    to?: string
+    link?: boolean
+  }
+
+  const currentRoute: Ref<string> = ref('pinia')
+  const rootMenuItems: Ref<MenuItems[]> = ref([
     {
       title: 'Home',
       props: {
@@ -54,6 +65,14 @@ export const useNavigationStore = defineStore('nav', () => {
       },
     },
     {
+      title: 'Design',
+      props: {
+        prependIcon: 'mdi-web',
+        to: '/web/design',
+        link: true,
+      },
+    },
+    {
       title: 'Nuxt',
       props: {
         prependIcon: 'mdi-web',
@@ -64,22 +83,44 @@ export const useNavigationStore = defineStore('nav', () => {
     {
       title: 'Wireframes',
       props: {
-        prependIcon: 'mdi-responsive',
+        prependIcon: 'mdi-web',
         to: '/wireframes',
+        link: true,
+      },
+    },
+    {
+      title: 'greyzone',
+      props: {
+        prependIcon: 'mdi-sign-caution',
+        to: '/web/greyzone',
+        link: true,
+      },
+    },
+    {
+      title: 'Meta',
+      props: {
+        prependIcon: 'mdi-web',
+        to: '/meta',
         link: true,
       },
     },
   ])
 
-  const navigationConfig = ref({
-    '/': rootMenuItems,
-    '/web': webMenuItems,
-  })
+  const navigationConfig = ref<Map<string, MenuItems[]>>(new Map())
+
+  navigationConfig.value.set('/', rootMenuItems.value)
+  navigationConfig.value.set('/web', webMenuItems.value)
+  navigationConfig.value.set('/web/nuxt', webMenuItems.value)
+  navigationConfig.value.set('/web/nuxt/server', webMenuItems.value)
+  navigationConfig.value.set('/web/nuxt/vuetify', webMenuItems.value)
+  navigationConfig.value.set('/web/design', webMenuItems.value)
+  navigationConfig.value.set('/web/design/iconography', webMenuItems.value)
+  navigationConfig.value.set('/web/greyzone', webMenuItems.value)
 
   const currentRouteMenuItems = computed(() =>
-    navigationConfig.value.hasOwnProperty(currentRoute.value)
-      ? navigationConfig.value[currentRoute.value]
-      : navigationConfig.value.value['/'])
+    !!navigationConfig.value.get(currentRoute.value)
+      ? navigationConfig.value.get(currentRoute.value)
+      : navigationConfig.value.get('/'))
 
   return {
     currentRoute,

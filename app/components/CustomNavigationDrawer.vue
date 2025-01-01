@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-interface Props {
+interface CustomNavigationProps {
   title?: string
   to?: string
   color?: string
@@ -14,7 +13,7 @@ const {
   title = 'some title',
   to = '/',
   color = 'pink',
-} = defineProps<Props>()
+} = defineProps<CustomNavigationProps>()
 
 const drawer = ref(false)
 

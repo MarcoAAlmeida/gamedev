@@ -10,5 +10,7 @@ url: 'https://web.dev/'
 
 1. [Design Resources](/web/design)
 2. [Nuxt](/web/nuxt)
-2. [Web Development Jargon](https://www.digitalsilk.com/digital-trends/web-development-terms/)
-
+3. [Web Development Jargon](https://www.digitalsilk.com/digital-trends/web-development-terms/)
+4. [Cloudfare](/web/cloudfare)
+5. [Eslint](/web/eslint)
+6. [jsonnet](https://jsonnet.org/learning/tutorial.html)

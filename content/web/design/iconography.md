@@ -1,8 +1,8 @@
 ---
-title: 'iconography'
-description: 'resources for building this app'
-icon: 'mdi-web'
-url: 'https://web.dev/'
+title: iconography
+description: graphical representations of files, programs, or actions (modern hieroglyphs)
+icon: i-tabler:favicon-filled
+url: https://icones.js.org/
 ---
 
 # Iconography
