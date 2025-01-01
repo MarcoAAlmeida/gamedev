@@ -59,7 +59,7 @@
                       Supermodel Wireframes
                     </v-card-title>
 
-                    <v-tooltip location="top" text="Tooltip">
+                    <v-tooltip location="top" text="lipstick">
                       <template #activator="{ props }">
                         <v-card-subtitle v-bind="props">
                           Put your tooltip on!

@@ -1,10 +1,9 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar>
-      <v-app-bar-nav-icon to="/" />
-
-      <v-app-bar-title>Wireframes</v-app-bar-title>
-    </v-app-bar>
+    <custom-navigation-drawer
+      title="Fabulous Wireframes"
+      color="pink-lighten-2"
+    />
 
     <v-main>
       <v-list lines="one">

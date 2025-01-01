@@ -26,15 +26,11 @@ const examplesGaga = computed(() => examplePages.map((item, i) => (
 
 <template>
   <v-app>
-    <v-app-bar app color="pink">
-      <v-app-bar-nav-icon to="/" link />
-
-      <v-toolbar-title>Gaga game</v-toolbar-title>
-
-      <v-spacer />
-
-      <v-btn icon="mdi-magnify" />
-    </v-app-bar>
+    <CustomNavigationDrawer
+      title="Gagagame"
+      color="pink-darken-4"
+      to="/examples"
+    />
 
     <v-main fluid>
       <v-container

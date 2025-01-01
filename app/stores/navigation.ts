@@ -1,7 +1,8 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useNavigationStore = defineStore('nav', () => {
-  const menuItems = ref([
+  const currentRoute = ref('pinia')
+  const rootMenuItems = ref([
     {
       title: 'Home',
       props: {
@@ -35,9 +36,54 @@ export const useNavigationStore = defineStore('nav', () => {
       },
     },
   ])
+  const webMenuItems = ref([
+    {
+      title: 'Home',
+      props: {
+        prependIcon: 'mdi-home',
+        to: '/',
+        link: true,
+      },
+    },
+    {
+      title: 'Web',
+      props: {
+        prependIcon: 'mdi-web',
+        to: '/web',
+        link: true,
+      },
+    },
+    {
+      title: 'Nuxt',
+      props: {
+        prependIcon: 'mdi-web',
+        to: '/web/nuxt',
+        link: true,
+      },
+    },
+    {
+      title: 'Wireframes',
+      props: {
+        prependIcon: 'mdi-responsive',
+        to: '/wireframes',
+        link: true,
+      },
+    },
+  ])
+
+  const navigationConfig = ref({
+    '/': rootMenuItems,
+    '/web': webMenuItems,
+  })
+
+  const currentRouteMenuItems = computed(() =>
+    navigationConfig.value.hasOwnProperty(currentRoute.value)
+      ? navigationConfig.value[currentRoute.value]
+      : navigationConfig.value.value['/'])
 
   return {
-    menuItems,
+    currentRoute,
+    currentRouteMenuItems,
   }
 })
 

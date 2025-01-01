@@ -22,15 +22,10 @@ const examplesGaga = computed(() => examplePages.map(item => (
 
 <template>
   <v-app>
-    <v-app-bar app color="pink">
-      <v-app-bar-nav-icon to="/meta" link />
-
-      <v-toolbar-title>Some folio</v-toolbar-title>
-
-      <v-spacer />
-
-      <v-btn icon="mdi-magnify" />
-    </v-app-bar>
+    <CustomNavigationDrawer
+      title="Vuetify Notebook"
+      color="orange-darken-3"
+    />
 
     <v-main fluid>
       <v-container
