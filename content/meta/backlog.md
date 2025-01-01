@@ -23,3 +23,13 @@ url: 'https://web.dev/'
 
 - experiment with Nuxthub fullstack features 
     1. leverage cloudfare database
+
+## Gutenify
+
+holds [Project Gutenberg](https://www.gutenberg.org) metadata collected from [feed site](https://www.gutenberg.org/cache/epub/feeds/)
+
+parses metadata with rdf-
+
+https://developers.cloudflare.com/workers/examples/
+
+https://en.wikipedia.org/wiki/Open_Publication_Distribution_System
