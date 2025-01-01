@@ -4,7 +4,7 @@
 <template>
   <v-layout class="">
     <CustomNavigationDrawer
-        title="Vuetify Notebook"
+        title="Vue dev Notebook"
         color="green"
         to="/examples"
     />
