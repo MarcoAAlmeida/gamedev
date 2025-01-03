@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@iconify-json/devicon": "^1.2.11",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/mdi": "^1.2.2",
     "@iconify-json/unjs": "^1.2.0",

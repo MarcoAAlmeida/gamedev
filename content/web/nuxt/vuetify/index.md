@@ -20,6 +20,17 @@ The [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/) is used to integrate Vuet
 
 [Nuxt Images](https://content.nuxt.com/usage/markdown#images)
 
+## Vuetify Documentation
+
+- [Grids](https://vuetifyjs.com/en/components/grids/)
+- [V-col](https://vuetifyjs.com/en/api/v-col/)
+- [Selects](https://vuetifyjs.com/en/components/selects/#usage)
+- [Menus](https://vuetifyjs.com/en/components/menus/#usage)
+- [Sheets](https://vuetifyjs.com/en/components/sheets/#anatomy)
+- [Breakpoints](https://vuetifyjs.com/en/features/display-and-platform/#breakpoints-and-thresholds)
+- [Avatars](https://vuetifyjs.com/en/components/avatars/#anatomy)
+- [Borders](https://vuetifyjs.com/en/styles/borders/#theme-colors)
+
 ## SASS customization
 
 ```{css}
@@ -71,7 +82,3 @@ export default defineVuetifyConfiguration({
 
 
 ![my image](/img/2024-12-26_211920.png)
-
-
-::simpleCard{:icon='icon' :title='title' :description='description' :url='url'}
-::

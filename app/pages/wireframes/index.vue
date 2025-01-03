@@ -3,7 +3,6 @@ const navigationStore = useNavigationStore()
 const {wireframesMenuItems} = storeToRefs(navigationStore)
 
 const {reshuffle} = useGagariumStore()
-
 const hand = reshuffle()
 
 </script>
@@ -17,28 +16,8 @@ const hand = reshuffle()
 
     <v-main>
       <v-row class="w-100" no-gutters>
-        <v-col>
-          <v-list density="compact">
-            <v-list-item
-                v-for="(item, i) in wireframesMenuItems"
-                :key="i"
-                :value="item"
-                :to="item.props?.to"
-                :link="item.props?.link"
-                color="primary"
-            >
-              <template v-slot:prepend>
-                <v-avatar size="x-large">
-                  <nuxt-img
-                      preload
-                      :src="hand[i]"
-                      sizes="64px"/>
-                </v-avatar>
-              </template>
-
-              <v-list-item-title v-text="item.title"></v-list-item-title>
-            </v-list-item>
-          </v-list>
+        <v-col cols="12">
+          <gaga-list/>
         </v-col>
         <v-col
             class="pa-2"
