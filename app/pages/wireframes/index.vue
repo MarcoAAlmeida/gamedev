@@ -17,8 +17,7 @@ const hand = reshuffle()
 
     <v-main>
       <v-row class="w-100" no-gutters>
-        <v-col md="2"
-               xs="12">
+        <v-col>
           <v-list density="compact">
             <v-list-item
                 v-for="(item, i) in wireframesMenuItems"
@@ -42,8 +41,6 @@ const hand = reshuffle()
           </v-list>
         </v-col>
         <v-col
-            md="10"
-            xs="12"
             class="pa-2"
         >
           <v-sheet
@@ -103,7 +100,6 @@ const hand = reshuffle()
               </v-row>
             </v-container>
           </v-sheet>
-
         </v-col>
       </v-row>
     </v-main>
