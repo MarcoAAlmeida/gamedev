@@ -18,8 +18,7 @@ const {gagarium} = storeToRefs(gagariumStore)
     <v-main>
       <v-row class="w-100" no-gutters>
         <v-col
-            cols="2"
-            sm="2"
+            cols="12"
         >
           <v-list lines="one">
             <v-list :items="wireframesMenuItems"/>
@@ -27,7 +26,6 @@ const {gagarium} = storeToRefs(gagariumStore)
         </v-col>
         <v-col
             cols="12"
-            sm="8"
         >
           <nuxt-img
             preload
