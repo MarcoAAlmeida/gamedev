@@ -48,7 +48,7 @@ const hand = reshuffle()
         Except for left-most, all these sidebars are not displayed in mobile
       </v-sheet>
 
-      <gaga-list/>
+      <nuxt-img src="/img/a8efef27-77bf-46a8-ba02-f785dfde6e01.jpg" class="ma-2" width="150"/>
     </v-navigation-drawer>
 
     <v-app-bar
