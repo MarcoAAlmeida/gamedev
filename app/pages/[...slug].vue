@@ -4,7 +4,7 @@
 <template>
   <v-layout class="">
     <CustomNavigationDrawer
-        title="Vue dev Notebook"
+        title="Vuebook"
         color="green"
         to="/examples"
     />

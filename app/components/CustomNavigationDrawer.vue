@@ -7,7 +7,7 @@ interface CustomNavigationProps {
 }
 
 const navigationStore = useNavigationStore()
-const { currentRouteMenuItems } = storeToRefs(navigationStore)
+const {currentRouteMenuItems} = storeToRefs(navigationStore)
 
 const {
   title = 'some title',
@@ -35,49 +35,67 @@ const toggleTheme = () => {
 <template>
   <v-app-bar app :elevation="0" :color="color">
     <template #prepend>
-      <v-app-bar-nav-icon @click.stop="resetDrawer" />
+      <v-app-bar-nav-icon @click.stop="resetDrawer"/>
     </template>
 
     <v-app-bar-title :to="to" link>
       {{ title }}
     </v-app-bar-title>
-    <v-spacer />
+    <v-spacer/>
 
-    <v-btn icon="mdi-magnify" />
+    <v-btn icon="mdi-magnify"/>
   </v-app-bar>
 
   <v-navigation-drawer
-    v-model="drawer"
-    temporary
+      v-model="drawer"
+      temporary
   >
-    <v-list :items="currentRouteMenuItems" />
+
+    <v-list density="compact">
+      <v-list-subheader>REPORTS</v-list-subheader>
+
+      <v-list-item
+          v-for="(item, i) in currentRouteMenuItems"
+          :key="i"
+          :value="item"
+          :to="item.props?.to"
+          :link="item.props?.link"
+          color="primary"
+      >
+        <template v-slot:prepend>
+          <icon :name="item.props?.prependIcon" class="mx-2" size="1.3em"/>
+        </template>
+
+        <v-list-item-title v-text="item.title"></v-list-item-title>
+      </v-list-item>
+    </v-list>
 
     <template #prepend>
       <v-list>
         <v-list-item
-          prepend-avatar="https://media.licdn.com/dms/image/v2/C4E03AQGdwW8RIsYb4g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516657994044?e=1740614400&v=beta&t=wJosF5afL6B05xpD_Bc2K3ZjNkOSAa49nOiMYi6Nv6M"
-          subtitle="marcoalmeida.dev.br"
-          title="Marco Almeida"
-          href="https://www.linkedin.com/in/marcoaasilva/"
-          target="_blank"
+            prepend-avatar="https://media.licdn.com/dms/image/v2/C4E03AQGdwW8RIsYb4g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516657994044?e=1740614400&v=beta&t=wJosF5afL6B05xpD_Bc2K3ZjNkOSAa49nOiMYi6Nv6M"
+            subtitle="marcoalmeida.dev.br"
+            title="Marco Almeida"
+            href="https://www.linkedin.com/in/marcoaasilva/"
+            target="_blank"
         >
           <template #append>
-            <icon name="i-logos:linkedin-icon" size=".2em" />
+            <icon name="i-logos:linkedin-icon" size=".2em"/>
           </template>
         </v-list-item>
       </v-list>
 
-      <v-divider />
+      <v-divider/>
     </template>
 
     <template #append>
       <div class="pa-2">
         <v-btn-group
-          variant="outlined"
-          divided
+            variant="outlined"
+            divided
         >
-          <v-btn icon="mdi-theme-light-dark" @click="toggleTheme" />
-          <v-btn icon="mdi-view-dashboard" href="https://admin.hub.nuxt.com/marco-a-almeida/" target="_blank" />
+          <v-btn icon="mdi-theme-light-dark" @click="toggleTheme"/>
+          <v-btn icon="mdi-view-dashboard" href="https://admin.hub.nuxt.com/marco-a-almeida/" target="_blank"/>
         </v-btn-group>
       </div>
     </template>

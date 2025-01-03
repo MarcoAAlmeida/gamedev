@@ -1,7 +1,7 @@
 ---
 title: changelog
 description: what has been changed lately
-icon: i-material-symbols:logo-dev
+icon: unjs:changelogen
 url: https://en.wikipedia.org/wiki/Changelog'
 ---
 
@@ -12,6 +12,7 @@ According to [wikipedia](https://en.wikipedia.org/wiki/Changelog)
 
 | date       | log                                                                                                                                                     |
 |:-----------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2025/01/02 | made CustomNavigationDrawer.vue aware of route (configured in navigation.ts)                                                                            |
 | 2025/01/01 | leveraged ContentRenderer to provide consistent layout for all content pages                                                                            |
 | 2024/12/28 | familiarized myself with [Vuetify layouts](https://vuetifyjs.com/en/features/application-layout/#placing-components). and placing components            |
 | 2024/12/28 | added a [backlog](/meta/backlog)                                                                                                                        |
