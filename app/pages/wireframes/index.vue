@@ -17,7 +17,7 @@ const hand = reshuffle()
 
     <v-main>
       <v-row class="w-100" no-gutters>
-        <v-col cols="2"
+        <v-col lg="2"
                sm="12">
           <v-list density="compact">
             <v-list-item
@@ -42,7 +42,7 @@ const hand = reshuffle()
           </v-list>
         </v-col>
         <v-col
-            cols="10"
+            lg="10"
             sm="12"
             class="pa-2"
         >
