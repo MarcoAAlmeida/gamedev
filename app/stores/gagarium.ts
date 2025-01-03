@@ -16,8 +16,16 @@ export const useGagariumStore = defineStore('gagarium', () => {
   '/gagarium/f52eb8bf95166120fa47e40a17ac2e8b.jpg',
   ])
 
+  const reshuffle = () => {
+    return gagarium.value
+        .map(value => ({value, sort: Math.random()}))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({value}) => value)
+  }
+
   return {
     gagarium,
+    reshuffle,
   }
 })
 
