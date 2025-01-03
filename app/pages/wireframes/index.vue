@@ -17,7 +17,7 @@ const hand = reshuffle()
 
     <v-main>
       <v-row class="w-100" no-gutters>
-        <v-col lg="2"
+        <v-col md="2"
                xs="12">
           <v-list density="compact">
             <v-list-item
@@ -42,7 +42,7 @@ const hand = reshuffle()
           </v-list>
         </v-col>
         <v-col
-            lg="10"
+            md="10"
             xs="12"
             class="pa-2"
         >
@@ -52,12 +52,12 @@ const hand = reshuffle()
           >
             <v-container fluid>
               <v-row>
-                <v-col sm="3" xs="12">
+                <v-col md="3" xs="12">
                   <v-img height="88" src="https://cdn.vuetifyjs.com/docs/images/graphics/img-placeholder.png"
                          cover></v-img>
                 </v-col>
 
-                <v-col sm="9" xs="12">
+                <v-col md="9" xs="12">
                   <nuxt-img
                       preload
                       v-for="src in hand"
