@@ -1,85 +1,42 @@
+<script setup>
+const navigationStore = useNavigationStore()
+const {wireframesMenuItems} = storeToRefs(navigationStore)
+
+const gagariumStore = useGagariumStore()
+const {gagarium} = storeToRefs(gagariumStore)
+
+
+</script>
+
 <template>
   <v-app id="inspire">
     <custom-navigation-drawer
-      title="Fabulous Wireframes"
-      color="pink-lighten-2"
+        title="Fabulous Wireframes"
+        color="pink-lighten-2"
     />
 
     <v-main>
-      <v-list lines="one">
-        <v-list :items="items" />
-      </v-list>
+      <v-row class="w-100" no-gutters>
+        <v-col
+            cols="2"
+            sm="2"
+        >
+          <v-list lines="one">
+            <v-list :items="wireframesMenuItems"/>
+          </v-list>
+        </v-col>
+        <v-col
+            cols="12"
+            sm="8"
+        >
+          <nuxt-img
+            preload
+            v-for="src in gagarium"
+            :key="src"
+            :src="src"
+            sizes="100vw sm:50vw md:400px"/>
+        </v-col>
+      </v-row>
     </v-main>
   </v-app>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const items = ref([
-  {
-    title: 'baseline',
-    value: 1,
-    props: {
-      prependIcon: 'mdi-page-layout-body',
-      to: '/wireframes/baseline',
-    },
-  },
-  {
-    title: 'constrained',
-    value: 1,
-    props: {
-      prependIcon: 'mdi-page-layout-body',
-      to: '/wireframes/constrained',
-    },
-  },
-  {
-    title: 'discord',
-    value: 1,
-    props: {
-      prependIcon: 'mdi-page-layout-body',
-      to: '/wireframes/discord',
-    },
-  },
-  {
-    title: 'extended-toolbar',
-    value: 1,
-    props: {
-      prependIcon: 'mdi-page-layout-body',
-      to: '/wireframes/extended-toolbar',
-    },
-  },
-  {
-    title: 'side-navigation',
-    value: 1,
-    props: {
-      prependIcon: 'mdi-page-layout-body',
-      to: '/wireframes/side-navigation',
-    },
-  },
-  {
-    title: 'steam',
-    value: 1,
-    props: {
-      prependIcon: 'mdi-page-layout-body',
-      to: '/wireframes/steam',
-    },
-  },
-  {
-    title: 'system-bar',
-    value: 1,
-    props: {
-      prependIcon: 'mdi-page-layout-body',
-      to: '/wireframes/system-bar',
-    },
-  },
-  {
-    title: 'three-column',
-    value: 1,
-    props: {
-      prependIcon: 'mdi-page-layout-body',
-      to: '/wireframes/three-column',
-    },
-  },
-])
-</script>

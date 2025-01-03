@@ -1,4 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
+import {ref} from "vue";
 
 export const useNavigationStore = defineStore('nav', () => {
   interface MenuItems {
@@ -119,6 +120,72 @@ export const useNavigationStore = defineStore('nav', () => {
     backlogMenu.value,
   ])
 
+  const wireframesMenuItems = ref([
+    {
+      title: 'baseline',
+      value: 1,
+      props: {
+        prependIcon: 'mdi-page-layout-body',
+        to: '/wireframes/baseline',
+      },
+    },
+    {
+      title: 'constrained',
+      value: 1,
+      props: {
+        prependIcon: 'mdi-page-layout-body',
+        to: '/wireframes/constrained',
+      },
+    },
+    {
+      title: 'discord',
+      value: 1,
+      props: {
+        prependIcon: 'mdi-page-layout-body',
+        to: '/wireframes/discord',
+      },
+    },
+    {
+      title: 'extended-toolbar',
+      value: 1,
+      props: {
+        prependIcon: 'mdi-page-layout-body',
+        to: '/wireframes/extended-toolbar',
+      },
+    },
+    {
+      title: 'side-navigation',
+      value: 1,
+      props: {
+        prependIcon: 'mdi-page-layout-body',
+        to: '/wireframes/side-navigation',
+      },
+    },
+    {
+      title: 'steam',
+      value: 1,
+      props: {
+        prependIcon: 'mdi-page-layout-body',
+        to: '/wireframes/steam',
+      },
+    },
+    {
+      title: 'system-bar',
+      value: 1,
+      props: {
+        prependIcon: 'mdi-page-layout-body',
+        to: '/wireframes/system-bar',
+      },
+    },
+    {
+      title: 'three-column',
+      value: 1,
+      props: {
+        prependIcon: 'mdi-page-layout-body',
+        to: '/wireframes/three-column',
+      },
+    },
+  ])
 
   const navigationConfig = ref<Map<string, MenuItems[]>>(new Map())
 
@@ -145,6 +212,7 @@ export const useNavigationStore = defineStore('nav', () => {
   return {
     currentRoute,
     currentRouteMenuItems,
+    wireframesMenuItems,
   }
 })
 
