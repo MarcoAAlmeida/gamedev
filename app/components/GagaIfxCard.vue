@@ -37,48 +37,7 @@ const presetFilters = computed(() => {
   >
     <v-container fluid>
       <v-row>
-        <v-col md="3" xs="12">
-          <v-select
-            v-model="filter"
-            :hint="`${filter.hint}`"
-            :items="availableFilters"
-            item-title="name"
-            item-value="modifier"
-            label="Select"
-            persistent-hint
-            return-object
-            single-line
-          />
-
-          <v-slider
-            v-model="angle"
-            :max="360"
-            :step="10"
-            class="ma-4"
-            label="angle"
-            hide-details
-          >
-            <template #append>
-              <v-text-field
-                v-model="angle"
-                density="compact"
-                style="width: 80px"
-                type="number"
-                variant="outlined"
-                hide-details
-              />
-            </template>
-          </v-slider>
-
-          <v-color-picker
-            v-show="filter.name==='tint'"
-            v-model="tintHue"
-            show-swatches
-          />
-
-          <nuxt-link to="web/nuxt/vuetify" target="_blank">
-            <Icon class="ma-1" name="i-devicon:vuetify" size=".5em" />
-          </nuxt-link>
+        <v-col cols="12">
         </v-col>
 
         <v-col md="9" xs="12">
@@ -105,7 +64,7 @@ const presetFilters = computed(() => {
             class="ma-2"
             :src="src"
             sizes="5em sm:10vw"
-            :modifiers="presetFilters"
+            :modifiers="{ rotate: 90 }"
           />
 
           <v-btn
