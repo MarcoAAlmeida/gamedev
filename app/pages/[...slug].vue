@@ -4,32 +4,31 @@
 <template>
   <v-layout class="">
     <CustomNavigationDrawer
-        title="Vuebook"
-        color="green"
-        to="/examples"
+      title="Vuebook"
+      color="green"
+      to="/examples"
     />
 
     <v-main class="d-flex align-top justify-left">
-      <ContentDoc class="ma-2" v-slot="{ doc }">
-
+      <ContentDoc v-slot="{ doc }" class="ma-2">
         <v-card
-            class="mx-auto w-100"
-            :subtitle="doc.description"
+          class="mx-auto w-100"
+          :subtitle="doc.description"
         >
-          <template v-slot:prepend>
+          <template #prepend>
             <nuxt-link :href="doc.url" target="_blank">
               <icon :name="doc.icon" size="2em" class="ma-2" />
             </nuxt-link>
           </template>
-          <template v-slot:title>
+          <template #title>
             <span class="font-weight-black">{{ doc.title }}</span>
           </template>
-          <template v-slot:subtitle>
+          <template #subtitle>
             <span class="">{{ doc.description }}</span>
           </template>
 
           <v-card-text>
-            <ContentRenderer class="mx-2" :value="doc"/>
+            <ContentRenderer class="mx-2" :value="doc" />
           </v-card-text>
         </v-card>
       </ContentDoc>

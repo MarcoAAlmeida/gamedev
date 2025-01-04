@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const {reshuffle} = useGagariumStore()
+const { reshuffle } = useGagariumStore()
 const hand = reshuffle()
-
 </script>
 
 <template>
@@ -22,7 +21,7 @@ const hand = reshuffle()
     >
       <nuxt-link to="/wireframes">
         <v-avatar color="info" class="ma-2">
-          <Icon name="unjs:changelogen" size="4em"/>
+          <Icon name="unjs:changelogen" size="4em" />
         </v-avatar>
       </nuxt-link>
 
@@ -59,21 +58,21 @@ const hand = reshuffle()
     </v-app-bar>
 
     <v-main>
-      <gaga-ifx-card/>
+      <gaga-ifx-card />
     </v-main>
 
     <v-navigation-drawer location="right" width="250">
       <v-sheet
-          class="border-xl pa-1"
-          color="orange"
-          height="128"
-          width="100%"
+        class="border-xl pa-1"
+        color="orange"
+        height="128"
+        width="100%"
       >
         <p>on mobile, navigation drawers are almost secret</p>
         <p>only show up upon swipe</p>
       </v-sheet>
 
-      <nuxt-img src="/img/a8efef27-77bf-46a8-ba02-f785dfde6e01.jpg" class="ma-2" width="150"/>
+      <nuxt-img src="/img/a8efef27-77bf-46a8-ba02-f785dfde6e01.jpg" class="ma-2" width="150" />
     </v-navigation-drawer>
 
     <v-footer
@@ -93,5 +92,6 @@ const hand = reshuffle()
     </v-footer>
   </v-app>
 </template>
+
 <script setup lang="ts">
 </script>

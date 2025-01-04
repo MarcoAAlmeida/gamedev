@@ -58,6 +58,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  image: {
+    provider: 'ipx',
+  },
   vuetify: {
     moduleOptions: {
       styles: { configFile: 'assets/settings.scss' },

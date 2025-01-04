@@ -1,18 +1,18 @@
 <script setup lang="ts">
-const {reshuffle} = useGagariumStore()
+const { reshuffle } = useGagariumStore()
 const hand = reshuffle()
 
 const angle = ref(0)
 
 const tintHue = ref('#DD0000')
 
-const filter = ref({ name: 'none', hint:'no filter applied', modifier: '' })
+const filter = ref({ name: 'none', hint: 'no filter applied', modifier: '' })
 
 const availableFilters = ref([
-  { name: 'none', hint:'no filter applied', modifier: '' },
-  { name: 'blur', hint:'some blur', modifier: 'blur' },
-  { name: 'grayscale', hint:'some blur', modifier: 'grayscale' },
-  { name: 'tint', hint:'pick your tint', modifier: 'tint' },
+  { name: 'none', hint: 'no filter applied', modifier: '' },
+  { name: 'blur', hint: 'some blur', modifier: 'blur' },
+  { name: 'grayscale', hint: 'some blur', modifier: 'grayscale' },
+  { name: 'tint', hint: 'pick your tint', modifier: 'tint' },
 ])
 
 const presetFilters = computed(() => {
@@ -27,57 +27,57 @@ const presetFilters = computed(() => {
     case 'tint':
       return { tint: tintHue.value, rotate: angle.value }
   }
-
 })
 </script>
 
 <template>
   <v-sheet
-      border="sm"
-      class="text-body-2 mx-0"
+    border="sm"
+    class="text-body-2 mx-0"
   >
     <v-container fluid>
       <v-row>
         <v-col md="3" xs="12">
           <v-select
-              v-model="filter"
-              :hint="`${filter.hint}`"
-              :items="availableFilters"
-              item-title="name"
-              item-value="modifier"
-              label="Select"
-              persistent-hint
-              return-object
-              single-line
-          ></v-select>
+            v-model="filter"
+            :hint="`${filter.hint}`"
+            :items="availableFilters"
+            item-title="name"
+            item-value="modifier"
+            label="Select"
+            persistent-hint
+            return-object
+            single-line
+          />
 
           <v-slider
-              v-model="angle"
-              :max="360"
-              :step="10"
-              class="ma-4"
-              label="angle"
-              hide-details
+            v-model="angle"
+            :max="360"
+            :step="10"
+            class="ma-4"
+            label="angle"
+            hide-details
           >
-            <template v-slot:append>
+            <template #append>
               <v-text-field
-                  v-model="angle"
-                  density="compact"
-                  style="width: 80px"
-                  type="number"
-                  variant="outlined"
-                  hide-details
-              ></v-text-field>
+                v-model="angle"
+                density="compact"
+                style="width: 80px"
+                type="number"
+                variant="outlined"
+                hide-details
+              />
             </template>
           </v-slider>
 
           <v-color-picker
-              v-model="tintHue"
-              v-show="filter.name==='tint'"
-              show-swatches></v-color-picker>
+            v-show="filter.name==='tint'"
+            v-model="tintHue"
+            show-swatches
+          />
 
           <nuxt-link to="web/nuxt/vuetify" target="_blank">
-            <Icon class="ma-1" name="i-devicon:vuetify" size=".5em"/>
+            <Icon class="ma-1" name="i-devicon:vuetify" size=".5em" />
           </nuxt-link>
         </v-col>
 
@@ -99,22 +99,23 @@ const presetFilters = computed(() => {
           </ul>
 
           <nuxt-img
-              preload
-              class="ma-2"
-              v-for="src in hand"
-              :key="src"
-              :src="src"
-              sizes="5em sm:10vw"
-              :modifiers="presetFilters"/>
+            v-for="src in hand"
+            :key="src"
+            preload
+            class="ma-2"
+            :src="src"
+            sizes="5em sm:10vw"
+            :modifiers="presetFilters"
+          />
 
           <v-btn
-              class="text-none"
-              href="https://image.nuxt.com/usage/use-image"
-              target="_blank"
-              color="info"
-              rounded="0"
-              variant="flat"
-              block
+            class="text-none"
+            href="https://image.nuxt.com/usage/use-image"
+            target="_blank"
+            color="info"
+            rounded="0"
+            variant="flat"
+            block
           >
             <span class="hidden-sm-and-down">
               Explore useImage() and generate a quick image on the fly

@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import {ref} from "vue";
+import { ref } from 'vue'
 
 export const useNavigationStore = defineStore('nav', () => {
   interface MenuItems {
@@ -193,19 +193,19 @@ export const useNavigationStore = defineStore('nav', () => {
   navigationConfig.value.set('/web', webMenuItems.value)
   navigationConfig.value.set('/meta', metaMenuItems.value)
 
-  const matchByClosestRoute = (route: string) : MenuItems[] | undefined => {
-    let largestPrefix = ""
+  const matchByClosestRoute = (route: string): MenuItems[] | undefined => {
+    let largestPrefix = ''
 
     for (const key of navigationConfig.value.keys()) {
       if (route.startsWith(key) && key.length > largestPrefix.length) {
-        largestPrefix = key;
+        largestPrefix = key
       }
     }
     return navigationConfig.value.get(largestPrefix)
   }
 
   const currentRouteMenuItems = computed(() =>
-    !!navigationConfig.value.get(currentRoute.value)
+    navigationConfig.value.get(currentRoute.value)
       ? navigationConfig.value.get(currentRoute.value)
       : matchByClosestRoute(currentRoute.value))
 
