@@ -17,7 +17,7 @@ const hand = reshuffle()
     <v-main>
       <v-row class="w-100" no-gutters>
         <v-col cols="12">
-          <gaga-list/>
+          <gaga-menu-list/>
         </v-col>
       </v-row>
     </v-main>
