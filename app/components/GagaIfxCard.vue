@@ -57,7 +57,7 @@ const presetFilters = computed(() => {
               type="error"
           >
             <template v-slot:text>
-              <p>in localhost, images are being rotated, but not when I deploy to NuxtHub, they´re not.</p>
+              <p>in localhost, images are being rotated, but not when I deploy to NuxtHub.</p>
               <v-img max-width="20em" class="ma-2" src="~/assets/images/20250104154517.png" />
               <p>there is a <a class="text-amber" href="https://github.com/nuxt/image/issues/1061" target="_blank">a known issue with IPX and Cloudfare </a></p>
             </template>

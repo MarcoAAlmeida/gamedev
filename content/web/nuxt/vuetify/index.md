@@ -5,23 +5,12 @@ icon: 'i-devicon:vuetify'
 url: 'https://vuetifyjs.com/en/components/all/#containment'
 ---
 
-# Vuetify
-
-For [a gente introduction](https://vuetifyjs.com/en/introduction/why-vuetify/#what-is-vuetify3f)
-
 >  Vuetify is a collection of pre-made components paired with powerful features such dynamic themes, global defaults, application layouts, and more. 
 
-1. [Vuetify](https://vuetifyjs.com/en/)
-2. [Vuetify features](https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides)
-3. [Vuetify navigation drawer](https://vuetifyjs.com/en/components/navigation-drawers/#bottom-drawer)
-4. [Vuetify wireframe](https://vuetifyjs.com/en/getting-started/wireframes/#examples)
-
-The [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/) is used to integrate Vuetify into [Nuxt](/nuxt).
-
-[Nuxt Images](https://content.nuxt.com/usage/markdown#images)
-
-## Vuetify Documentation
-
+- [Vuetify](https://vuetifyjs.com/en/)
+- [Vuetify features](https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides)
+- [Vuetify navigation drawer](https://vuetifyjs.com/en/components/navigation-drawers/#bottom-drawer)
+- [Vuetify wireframe](https://vuetifyjs.com/en/getting-started/wireframes/#examples)
 - [Grids](https://vuetifyjs.com/en/components/grids/)
 - [V-col](https://vuetifyjs.com/en/api/v-col/)
 - [Selects](https://vuetifyjs.com/en/components/selects/#usage)
@@ -30,6 +19,13 @@ The [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/) is used to integrate Vuet
 - [Breakpoints](https://vuetifyjs.com/en/features/display-and-platform/#breakpoints-and-thresholds)
 - [Avatars](https://vuetifyjs.com/en/components/avatars/#anatomy)
 - [Borders](https://vuetifyjs.com/en/styles/borders/#theme-colors)
+
+The [vuetify-nuxt-module](https://nuxt.vuetifyjs.com/) is used to integrate Vuetify into [Nuxt](/nuxt).
+
+[Nuxt Images](https://content.nuxt.com/usage/markdown#images)
+
+## Vuetify Documentation
+
 
 ## SASS customization
 
@@ -80,5 +76,4 @@ export default defineVuetifyConfiguration({
       },
 ```
 
-
-![my image](/img/2024-12-26_211920.png)
+:ScreenshotThumbnail{ title='some wacky color schemes for Vuetify theme' src='/screenshots/20241226211920.png' style='ma-4 w-33 h-25'}
