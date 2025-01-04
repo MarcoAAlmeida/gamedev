@@ -59,6 +59,7 @@ export default defineNuxtConfig({
     },
   },
   image: {
+    cache: false,
     provider: 'ipx',
   },
   vuetify: {
