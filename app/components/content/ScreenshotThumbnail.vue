@@ -18,7 +18,7 @@ const openNewTab = (imgUrl) => {
 
 <template>
   <v-card
-      class="ma-4 w-33 h-25"
+      class="ma-4 w-95 w-md-75 h-25"
       elevation="1"
       rounded="0"
   >
@@ -27,7 +27,7 @@ const openNewTab = (imgUrl) => {
         <p class="mx-5 text-grey"> {{ title }}</p>
         <v-spacer></v-spacer>
 
-        <v-btn v-tooltip="'open in new tab'" class="ma-2 bg-grey-lighten-2" icon size="x-small"
+        <v-btn v-tooltip="'open image in new tab'" class="ma-2 bg-grey-lighten-2" icon size="x-small"
                @click="openNewTab(src)">
           <Icon name="mdi-open-in-new" size="1.5em"/>
         </v-btn>

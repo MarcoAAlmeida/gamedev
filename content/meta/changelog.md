@@ -5,13 +5,16 @@ icon: unjs:changelogen
 url: https://en.wikipedia.org/wiki/Changelog'
 ---
 
-According to [wikipedia](https://en.wikipedia.org/wiki/Changelog)
-
-> A changelog ... is a log or record of all notable changes made to a project. The project is often a website or software project, and the changelog usually includes records of changes such as bug fixes, new features, et
-
+:reference-card{
+quote='a log or record of all notable changes made to a project. The project is often a website or software project, and
+the changelog usually includes records of changes such as bug fixes, new features, etc'
+url='https://en.wikipedia.org/wiki/Changelog'
+author='Wikipedia definition'
+}
 
 | date       | log                                                                                                                                                     |
 |:-----------|:--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2025/01/04 | introduced ReferenceCard and ScreenshotThumbnail components                                                                                             |
 | 2025/01/02 | made CustomNavigationDrawer.vue aware of route (configured in navigation.ts)                                                                            |
 | 2025/01/01 | leveraged ContentRenderer to provide consistent layout for all content pages                                                                            |
 | 2024/12/28 | familiarized myself with [Vuetify layouts](https://vuetifyjs.com/en/features/application-layout/#placing-components). and placing components            |

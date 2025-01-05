@@ -20,7 +20,7 @@ const openNewTab = (imgUrl) => {
 
 <template>
   <v-card
-      class="ma-4 w-75 h-25"
+      class="ma-4 w-95 w-md-75 h-25"
       elevation="1"
       rounded="0"
   >

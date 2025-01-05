@@ -5,7 +5,17 @@ icon: 'i-devicon:vuetify'
 url: 'https://vuetifyjs.com/en/components/all/#containment'
 ---
 
-:reference-card{ quote='Vuetify is a collection of pre-made components paired with powerful features such dynamic themes, global defaults, application layouts, and more' url='https://vuetifyjs.com/en/components/all/#containment' author='Getting Started with Vuetify'}
+:reference-card{
+    quote='Vuetify is a collection of pre-made components paired with powerful features such dynamic themes, global defaults, application layouts, and more'
+    url='https://vuetifyjs.com/en/components/all/#containment'
+    author='Getting Started with Vuetify'
+}
+
+:ScreenshotThumbnail{ 
+    title='support for advanced components' 
+    src='/screenshots/20250104225154.png' 
+}
+
 
 - [Vuetify](https://vuetifyjs.com/en/)
 - [Vuetify features](https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides)

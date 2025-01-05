@@ -5,8 +5,11 @@ icon: 'mdi-web'
 url: 'https://web.dev/'
 ---
 
-
-> Enterprise web development, also called enterprise web dev, is the process of developing enterprise-level solutions. These solutions can include websites, software, applications, and more. [source](https://www.webfx.com/web-development/glossary/what-is-enterprise-web-development/)
+:reference-card{
+quote='Enterprise web development, also called enterprise web dev, is the process of developing enterprise-level solutions. These solutions can include websites, software, applications, and more.'
+url='https://www.webfx.com/web-development/glossary/what-is-enterprise-web-development/'
+author='WebFx definition'
+}
 
 1. [Design Resources](/web/design)
 2. [Nuxt](/web/nuxt)

@@ -4,7 +4,11 @@ description: stuff that could be done
 icon: i-material-symbols:logo-dev
 url: https://www.atlassian.com/agile/scrum/backlogs
 ---
-:reference-card{ quote='A product backlog is a prioritized list of work for the development team that is derived from the product roadmap and its requirements' url='https://www.atlassian.com/agile/scrum/backlogs' author='Atlassian Scrum Agile definitions'}
+:reference-card{
+  quote='a prioritized list of work for the development team that is derived from the product roadmap and its requirements'
+  url='https://www.atlassian.com/agile/scrum/backlogs'
+  author='Atlassian Scrum Agile definitions'
+}
 
 # 1. Landing page, layout, and navigation improvements
 
@@ -71,6 +75,13 @@ create an OpenAPI to retrieve metadata using [Nuxt server support](/web/nuxt/ser
 
 [Open Publication Distribution System](https://en.wikipedia.org/wiki/Open_Publication_Distribution_System)
 
-## 6. Patreonizing
+## 8. Patreonizing
 
 - [egghead.io](https://egghead.io/)
+
+## 9. Payments
+
+- [OpenPix](https://openpix.com.br/pricing/)
+
+- [Strip Support](https://support.stripe.com/)
+- [how to enable pix as a payment method in brazil](https://support.stripe.com/questions/how-to-enable-pix-as-a-payment-method-in-brazil?locale=pt-BR)
