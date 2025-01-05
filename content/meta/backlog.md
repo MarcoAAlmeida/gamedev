@@ -4,9 +4,7 @@ description: stuff that could be done
 icon: i-material-symbols:logo-dev
 url: https://www.atlassian.com/agile/scrum/backlogs
 ---
-
-As stated in [Atlassian Scrum Agile definitions](https://www.atlassian.com/agile/scrum/backlogs)
-> A product backlog is a prioritized list of work for the development team that is derived from the product roadmap and its requirements.
+:reference-card{ quote='A product backlog is a prioritized list of work for the development team that is derived from the product roadmap and its requirements' url='https://www.atlassian.com/agile/scrum/backlogs' author='Atlassian Scrum Agile definitions'}
 
 # 1. Landing page, layout, and navigation improvements
 
@@ -17,7 +15,9 @@ As stated in [Atlassian Scrum Agile definitions](https://www.atlassian.com/agile
   4. leverage [og-image](https://nuxt.com/modules/og-image)
   5. leverage [Nuxt I18n](https://i18n.nuxtjs.org/)
 
-## 1.2 Make navigation.ts menuItem selection hierarchical
+## [1.2 Make navigation.ts menuItem selection hierarchical]{style="text-decoration: line-through"}!
+
+[done]{class="text-green"}
 
 avoid sections like these in `app/stores/navigation.ts`
 ```

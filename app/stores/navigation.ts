@@ -69,6 +69,15 @@ export const useNavigationStore = defineStore('nav', () => {
     },
   })
 
+  const vuetifyMenu: Ref<MenuItems> = ref ({
+    title: 'Vuetify',
+    props: {
+      prependIcon: 'i-devicon:vuetify',
+      to: '/web/nuxt/vuetify',
+      link: true,
+    },
+  })
+
   const greyzoneMenu: Ref<MenuItems> = ref ({
     title: 'greyzone',
     props: {
@@ -111,6 +120,14 @@ export const useNavigationStore = defineStore('nav', () => {
     wireframeMenu.value,
     greyzoneMenu.value,
     metaMenu.value,
+  ])
+
+  const nuxtMenuItems = ref([
+    homeMenu.value,
+    webMenu.value,
+    designMenu.value,
+    nuxtMenu.value,
+    vuetifyMenu.value,
   ])
 
   const metaMenuItems = ref([
@@ -192,6 +209,7 @@ export const useNavigationStore = defineStore('nav', () => {
   navigationConfig.value.set('/', rootMenuItems.value)
   navigationConfig.value.set('/web', webMenuItems.value)
   navigationConfig.value.set('/meta', metaMenuItems.value)
+  navigationConfig.value.set('/web/nuxt', nuxtMenuItems.value)
 
   const matchByClosestRoute = (route: string): MenuItems[] | undefined => {
     let largestPrefix = ''

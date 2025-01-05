@@ -1,16 +1,11 @@
 ---
 title: 'Nuxt'
-description: 'a free and open-source framework for developing Vue.js web applications'
+description: 'open-source framework for developing Vue.js web applications'
 icon: i-vscode-icons:file-type-nuxt
 url: 'https://nuxt.com/docs/getting-started/introduction'
 ---
 
-# What is Nuxt?
-
-According to this [brief introduction](https://nuxt.com/docs/getting-started/introduction):
-
-> Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js.
-
+:reference-card{ quote='Nuxt is a free and open-source framework with an intuitive and extendable way to create type-safe, performant and production-grade full-stack web applications and websites with Vue.js' url='https://nuxt.com/docs/getting-started/introduction' author='Getting Started with Nuxt'}
 
 For CMS-oriented apps, check [Nuxt Content](nuxt/content), and [Nuxt Templates](https://nuxt.com/templates)
 

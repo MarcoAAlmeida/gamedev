@@ -5,7 +5,7 @@ icon: 'i-devicon:vuetify'
 url: 'https://vuetifyjs.com/en/components/all/#containment'
 ---
 
->  Vuetify is a collection of pre-made components paired with powerful features such dynamic themes, global defaults, application layouts, and more. 
+:reference-card{ quote='Vuetify is a collection of pre-made components paired with powerful features such dynamic themes, global defaults, application layouts, and more' url='https://vuetifyjs.com/en/components/all/#containment' author='Getting Started with Vuetify'}
 
 - [Vuetify](https://vuetifyjs.com/en/)
 - [Vuetify features](https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides)
