@@ -29,10 +29,12 @@ export default defineNuxtConfig({
     } },
   css: ['@/assets/main.scss', '@mdi/font/css/materialdesignicons.css'],
   content: {
-    highlight: {
-      theme: {
-        default: 'github-light',
-        dark: 'github-dark',
+    build: {
+      markdown: {
+        highlight: {
+          // Theme used in all color schemes.
+          theme: 'github-light',
+        },
       },
     },
   },

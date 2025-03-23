@@ -1,37 +1,27 @@
 <script setup lang="ts">
+const route = useRoute()
+const { data: page } = await useAsyncData(route.path, () => {
+  return queryCollection('docs').path(route.path).first()
+})
 </script>
 
 <template>
   <v-layout class="">
     <CustomNavigationDrawer
-      title="Vuebook"
-      color="green"
-      to="/examples"
+      title="gamedev"
+      color="green-darken-3"
+      to="/"
     />
 
     <v-main class="d-flex align-top justify-left">
-      <ContentDoc v-slot="{ doc }" class="ma-2">
-        <v-card
-          class="mx-auto w-100"
-          :subtitle="doc.description"
-        >
-          <template #prepend>
-            <nuxt-link :href="doc.url" target="_blank">
-              <icon :name="doc.icon" size="2em" class="ma-2" />
-            </nuxt-link>
-          </template>
-          <template #title>
-            <span class="font-weight-black">{{ doc.title }}</span>
-          </template>
-          <template #subtitle>
-            <span class="">{{ doc.description }}</span>
-          </template>
-
-          <v-card-text>
-            <ContentRenderer class="mx-2" :value="doc" />
-          </v-card-text>
-        </v-card>
-      </ContentDoc>
+      <v-card
+        class="mx-auto w-100"
+      >
+        <v-card-text>
+          <v-img :src="page?.meta.cover" height="18em" />
+          <ContentRenderer v-if="page" :value="page" />
+        </v-card-text>
+      </v-card>
     </v-main>
   </v-layout>
 </template>
