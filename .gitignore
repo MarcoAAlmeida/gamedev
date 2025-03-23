@@ -24,5 +24,3 @@ logs
 .env.*
 !.env.example
 
-# unfreeze lock file
-pnpm-lock.yaml
