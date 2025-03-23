@@ -1,12 +1,6 @@
 <script setup>
-import { useListPages } from '@/composables/useListPages'
-
-const route = useRoute()
-const { data } = await useAsyncData(route.path, () => {
-  return queryCollection('docs').all()
-}, {
+const { data } = await useAsyncData('unique-key', () => queryCollection('docs').all(), {
   transform: (fetchedData) => {
-    // Add or modify properties in the fetched data
     return fetchedData.map(item => ({
       ...item,
       flex: 12,
