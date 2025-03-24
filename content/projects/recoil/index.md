@@ -4,6 +4,7 @@ description: Recoil is an open-source RTS engine, a recent hard fork of the Spri
 icon: i-material-symbols:logo-dev
 url: https://github.com/beyond-all-reason/spring
 cover: /projects/ge8q.png
+featured: true
 ---
 # Recoil RTS Engine - Technical Introduction
 

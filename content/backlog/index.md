@@ -4,6 +4,7 @@ description: ideas
 icon: i-material-symbols:logo-dev
 url: https://www.productplan.com/glossary/backlog/
 cover: /gagarium/0b2b9ab806cdccc70e1941f671ce0103.jpg
+featured: false
 ---
 
 

@@ -4,6 +4,7 @@ description: a free and open-source game of ancient warfare.
 icon: i-material-symbols:logo-dev
 url: https://gitea.wildfiregames.com/
 cover: /projects/shewolf.jpg
+featured: false
 ---
 
 

@@ -4,6 +4,7 @@ description: Beyond All Reason (BAR) is an open-source RTS game built on the Spr
 icon: i-material-symbols:logo-dev
 url: https://github.com/beyond-all-reason/Beyond-All-Reason
 cover: /projects/BAR4K_Loadingscreen_20-min.png
+featured: true
 ---
 
 
