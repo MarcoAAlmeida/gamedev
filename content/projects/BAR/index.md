@@ -16,6 +16,9 @@ featured: true
   author='BAR'
 }
 
+::youtube-lite{videoId="sHM7zIX5Lzo"}
+::
+
 ## Architecture
 - **Engine**: C++ Spring RTS Engine with Lua for game logic and OpenGL rendering
 - **Game Logic**: Modular, event-driven architecture in Lua

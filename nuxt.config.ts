@@ -27,7 +27,10 @@ export default defineNuxtConfig({
         },
       ],
     } },
-  css: ['@/assets/main.scss', '@mdi/font/css/materialdesignicons.css'],
+  css: [
+    '@/assets/main.scss',
+    'lite-youtube-embed/src/lite-yt-embed.css',
+    '@mdi/font/css/materialdesignicons.css'],
   content: {
     build: {
       markdown: {
