@@ -5,6 +5,8 @@ icon: i-material-symbols:logo-dev
 url: https://github.com/beyond-all-reason/spring
 cover: /projects/ge8q.png
 featured: true
+priority: 0
+diataxis: reference
 ---
 # Recoil RTS Engine - Technical Introduction
 

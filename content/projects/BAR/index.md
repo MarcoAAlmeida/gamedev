@@ -5,6 +5,8 @@ icon: i-material-symbols:logo-dev
 url: https://github.com/beyond-all-reason/Beyond-All-Reason
 cover: /projects/BAR4K_Loadingscreen_20-min.png
 featured: true
+priority: 10
+diataxis: reference
 ---
 
 

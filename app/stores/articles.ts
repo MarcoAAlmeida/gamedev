@@ -8,7 +8,9 @@ export const useArticleStore = defineStore('articles', () => {
 
   const reloadFeatured = async () => {
     const data = await queryCollection('articles').all()
-    featured.value = data.filter(article => article.meta.featured)
+    featured.value = data
+      .filter(article => article.meta.featured)
+      .sort((a, b) => (b.meta.priority as number) - (a.meta.priority as number))
       .map((article: DocsCollectionItem) => ({
         ...article,
         flex: 12,

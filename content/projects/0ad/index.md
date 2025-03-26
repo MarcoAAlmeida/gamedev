@@ -5,6 +5,7 @@ icon: i-material-symbols:logo-dev
 url: https://gitea.wildfiregames.com/
 cover: /projects/shewolf.jpg
 featured: false
+priority: 0
 ---
 
 

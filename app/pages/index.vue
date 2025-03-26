@@ -7,6 +7,8 @@ const links = ref([
   { name: 'About Us', path: '/' },
 ])
 
+const showLoading = computed(() => featured.value.length === 0)
+
 onMounted(() => {
   articleStore.reloadFeatured()
 })
@@ -24,7 +26,8 @@ onMounted(() => {
         class="mx-auto"
         max-width="500"
       >
-        <v-row dense>
+        <v-skeleton-loader v-if="showLoading" type="card" />
+        <v-row v-else dense>
           <v-col
             v-for="card in featured"
             :key="card.title"
