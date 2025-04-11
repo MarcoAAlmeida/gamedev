@@ -19,6 +19,13 @@ The [open-source engine](https://tombengine.com/) for custom Tomb Raider adventu
 
 [Tomb Editor](https://github.com/MontyTRC89/Tomb-Editor) (TE) is a level editor designed for the full range of classic Tomb Raider game series (1-5), as well as for contemporary engine reimplementation projects and game engines designed for community modding and level building.
 
+### Tutorial Series
+
+Follow the [Tutorial series](https://tombengine.com/docs/tomb-engine-beginners-tutorial/): 1 preamble-install + 5 chapters
+
+![tutorial series](</projects/20250403_211516.png>){:style="max-width: 40em; width: 100%; height: auto;"}
+
+
 ## Development
 
 TombEngine is primarily developed using C++ and C for its core engine functionalities, with Lua integrated as the native scripting language for game customization and development. ​

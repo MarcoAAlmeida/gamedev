@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   // https://nuxt.com/modules
   modules: ['@nuxthub/core', '@nuxt/eslint', '@nuxt/content', 'vuetify-nuxt-module', 'vuetify-nuxt-module', '@unocss/nuxt', '@nuxt/icon', '@pinia/nuxt', '@nuxt/image'],
+  ssr: false,
   components: {
     global: true,
     dirs: ['~/components'],
